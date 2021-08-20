@@ -1,0 +1,78 @@
+    1  ls /var/lib/docker
+    2  docker info
+    3  docker network ls
+    4  docker inspect bridge
+    5  docker images
+    6  docker ps -a
+    7  docker volume ls
+    8  docker pull httpd
+    9  docker pull oraclelinux:8
+   10  clear
+   11  docker search ubuntu
+   12  clear
+   13  docker images
+   14  docker inspect ccb
+   15  docker images
+   16  docker inspect de3
+   17  docker system df
+   18  docker create --name ApacheServer httpd
+   19  docker ps -a
+   20  docker inspect ApacheServer
+   21  docker start  ApacheServer
+   22  docker ps -a
+   23  docker inspect ApacheServer
+   24  docker inspect bridge 
+   25  docker stop ApacheServer
+   26  docker inspect bridge 
+   27  docker inspect ApacheServer
+   28  docker start  ApacheServer
+   29  docker inspect ApacheServer
+   30  docker top ApacheServer
+   31  ps ax | grep 6692
+   32  clear
+   33  docker ps -a
+   34  docker system df
+   35  docker stats
+   36  docker info
+   37  clear
+   38  docker ps -a
+   39  cat /etc/hosts
+   40  docker exec ApacheServer cat /etc/hosts
+   41  docker exec ApacheServer bash
+   42  docker exec -i -t ApacheServer bash
+   43  docker inspect ApacheServer
+   44  docker inspect httpd
+   45  docker exec -i -t -w /etc ApacheServer bash
+   46  docker ps -a
+   47  clear
+   48  docker inspect oraclelinux:8
+   49  clear
+   50  docker create --name TestOL oraclelinux:8
+   51  docker start TestOL
+   52  docker ps -a
+   53  docker rm TestOL
+   54  docker ps -a
+   55  docker ps -a
+   56  docker create -i -t --name TestOL oraclelinux:8
+   57  docker start TestOL
+   58  docker ps -a
+   59  docker inspect oraclelinux:8
+   60  clear
+   61  docker top TestOL
+   62  docker ps -a
+   63  docker exec -i -t TestOL bash
+   64  docker ps -a
+   65  docker attach TestOL
+   66  docker ps -a
+   67  docker start TestOL
+   68  docker ps -a
+   69  docker attach --detach-keys="ctrl-i" TestOL
+   70  docker ps -a
+   71  clear
+   72  histroy
+   73  history
+   74  clear
+   75  docker run -i -t --name TestAlpine alpine
+   76  docker ps -a
+   77  history
+   78  history > /c/Users/91912/command_history2007

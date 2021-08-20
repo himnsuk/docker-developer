@@ -1,0 +1,71 @@
+   
+  420  docker run -d --name logs10    --log-driver json-file     --log-opt max-size=1k     --log-opt max-file=10     --log-opt mode=non-blocking     alpine /bin/sh -c "while true; do sleep 2; df -h; done"
+  421  docker ps -a | grep logs10
+  422  docker logs logs10
+  423  docker inspect logs10
+  424  docker ps -a
+  425  cd ..
+  426  ls
+  427  vi Dockerfile2
+  428  vi Dockerfile1
+  429  history 
+  430  exit
+  431  ps ax | grep dockerd
+  432  docker ps -a
+  433  docker inspect webserver
+  434  clear
+  435  docker run -i -t --name restartalpine --restart=always alpine
+  436  docker ps -a | grep restartalpine
+  437  docker attach restartalpine
+  438  docker ps -a | grep restartalpine
+  439  docker inspect -f "{{.Name}} {{.RestartCount}}" restartalpine
+  440  docker stop restartalpine
+  441  docker inspect -f "{{.Name}} {{.RestartCount}}" restartalpine
+  442  docker ps -a | grep restartalpine
+  443  docker logs restartalpine
+  444  clear
+  445  docker ps -a | grep restartalpine
+  446  ls
+  447  cd Dockerfiles
+  448  vi restart.sh
+  449  cat restart.sh
+  450  chmod 777 restart.sh
+  451  sh restart.sh
+  452  docker cp restart.sh restartalpine:/usr/restart.sh
+  453  docker start restartalpine
+  454  docker exec restartalpine cat /usr/restart.sh
+  455  docker commit -c "cmd sh /usr/restart.sh" restartalpine newimg:2
+  456  docker inspect newimg:2
+  457  vi Dockerfile8
+  458  docker images
+  459  docker info
+  460  vi Dockerfile8
+  461  docker images
+  462  docker run -d --name restartchk2 --restart=on-failure:3 newimg:2
+  463  docker inspect restartchk2
+  464  docker logs restartchk2
+  465  ls
+  466  cat Dockerfile
+  467  cat Sample.sh
+  468  mkdir apps
+  469  cp Dockerfile apps
+  470  cp Sample.sh apps
+  471  cd apps
+  472  ls
+  473  docker images
+  474  cat Dockerfile
+  475  docker save -o ubuntu.tar ubuntu
+  476  ls
+  477  docker build -t newubuntu:v11 -f Dockerfile .
+  478  vi .dockerignore
+  479  docker build -t newubuntu:v11 -f Dockerfile .
+  480  cat .dockerignore
+  481  vi .dockerignore
+  482  vi Dockerfile
+  483  cp ubuntu.tar a.tar
+  484  ls
+  485  vi .dockerignore
+  486  clear
+  487  sudo -i
+  488  history
+  489  history > /c/Users/91912/command_history_2307

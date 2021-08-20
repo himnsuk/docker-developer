@@ -1,0 +1,159 @@
+   82  exit
+   83  sudo -i
+   84  exit
+   85  docker images
+   86  docker ps -a
+   87  docker stop TestOL ApacheServer
+   88  docker ps -a
+   89  clear
+   90  docker ps -a
+   91  docker ps -q
+   92  docker ps -a -q
+   93  docker start $(docker ps -a -q)
+   94  docker ps -a
+   95  docker inspect ApacheServer
+   96  CLEAR
+   97  clear
+   98  docker inspect -f "{{.Name}} {{.State.Status}} \
+{{.NetworkSettings.IPAddress}}" ApacheServer
+   99  docker inspect -f "{{.Name}} {{.State.Status}} {{.NetworkSettings.IPAddress}}" $(docker ps -a -q)
+  100  docker inspect ApacheServer
+  101  docker info
+  102  clear
+  103  docker logs ApacheServer
+  104  clear
+  105  docker images
+  106  docker run -i -t --name logscheck --detach-keys="ctrl-i" alpine
+  107  docker ps -a
+  108  docker logs logscheck
+  109  docker diff logscheck
+  110  clear
+  111  docker events --since=30m
+  112  docker run -i -t --name TestUbuntu --detach-keys="ctrl-i" ubuntu
+  113  docker inspect ubuntu
+  114  clear
+  115  docker ps -a
+  116  docker commit TestUbuntu newimage:v2
+  117  docker images
+  118  docker inspect newimage:v2
+  119  docker images
+  120  docker history newimage:v2
+  121  clear
+  122  docker images
+  123  docker run -i -t --rm newimage:v2
+  124  docker ps -a
+  125  clear
+  126  mkdir Dockerfiles
+  127  cd Dockerfiles
+  128  vi Sample.sh
+  129  ls
+  130  cat Sample.sh 
+  131  sh Sample.sh
+  132  sh Sample.sh /etc/hosts
+  133  sh Sample.sh /etc/hosts00000
+  134  pwd
+  135  ls
+  136  docker pull scratch
+  137  docker system df
+  138  vi Dockerfile
+  139  ls
+  140  cat Dockerfile
+  141  ls
+  142  clear
+  143  ls
+  144  docker build -t newubuntu:v1 -f Dockerfile .
+  145  docker history newubuntu:v1
+  146  docker inspect newubuntu:v1
+  147  docker images
+  148  docker run --rm newubuntu:v1
+  149  docker run --rm newubuntu:v1 /etc/resolv.conf
+  150  docker run --rm newubuntu:v1 sh /code/Sample.sh /etc/resolv.conf
+  151  docker run --rm -i -t newubuntu:v1 bash
+  152  vi Dockerfile
+  153  ls
+  154  docker build -t newubuntu:v2 -f Dockerfile .
+  155  docker build -t newubuntu:v2 -f Dockerfile . --no-cache
+  156  docker images
+  157  docker image prune
+  158  docker images
+  159  docker run --rm newubuntu:v2
+  160  docker run --rm newubuntu:v2 /etc/resolv.conf
+  161  docker run --rm -i -t newubuntu:v2 bash
+  162  docker pull mysql:5.7
+  163  docker inspect mysql:5.7 
+  164  docker info
+  165  vi createdb.sql
+  166  ls
+  167  docker images
+  168  docker run -d --name testdb mysql:5.7
+  169  docker ps -a
+  170  docker logs testdb
+  171  docker volume ls
+  172  docker rm testdb
+  173  docker volume ls
+  174  docker volume rm d240c6dff8deb30f2b88edb3f7010fa1fbaac5cc34a3ba282374a63d3d1c7af2
+  175  docker volume ls
+  176  clear
+  177  ls
+  178  vi Dockerfile1
+  179  docker build -t newmysql:1 -f Dockerfile1 .
+  180  docker images
+  181  docker inspect newmysql:1
+  182  docker images
+  183  docker volume ls
+  184  docker run -d --name testdb newmysql:1
+  185  docker ps -a
+  186  docker volume ls
+  187  docker inspect  2497e690990802e30d5d953b0dbeb0cda94718106296ba481d4a728cde74222d
+  188  docker logs testdb
+  189  docker volume ls
+  190  docker inspect testdb
+  191  docker system df
+  192  docker stats testdb
+  193  docker top testdb
+  194  docker exec -i -t testdb bash
+  195  clear
+  196  docker images
+  197  docker inspect httpd
+  198  clear
+  199  docker run -d --name webserver -p 8000:80 httpd
+  200  docker port webserver
+  201  docker inspect -f "{{.NetworkSettings.IPAddress}}" webserver
+  202  docker inspect webserver
+  203  docker inspect TestApache
+  204  docker ps -a
+  205  docker inspect ApacheServer
+  206  curl localhost:8000
+  207  clear
+  208  docker port webserver
+  209  docker inspect -f "{{.NetworkSettings.IPAddress}}" webserver
+  210  docker inspect webserver
+  211  curl localhost:8000
+  212  docker stop webserver
+  213  docker start webserver
+  214  docker run -d --name dynwebserver -P httpd
+  215  docker port dynwebserver
+  216  docker stop dynwebserver
+  217  docker start dynwebserver
+  218  docker port dynwebserver
+  219  clear
+  220  vi data.json
+  221  vi node.js
+  222  ls
+  223  vi Dockerfile2
+  224  ls
+  225  docker build -t newnode:1 -f Dockerfile2 .
+  226  clear
+  227  docker inspect newnode:1
+  228  docker images
+  229  clear
+  230  docker images
+  231  docker run -d --name testnode -p 9500:9000 newnode:1
+  232  docker ps -a
+  233  clear
+  234  docker logs testnode
+  235  curl localhost:9500/listUsers
+  236  docker stats testnode
+  237  docker images
+  238  history
+  239  history > /c/Users/91912/command_history2107

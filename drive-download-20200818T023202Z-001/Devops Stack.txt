@@ -1,0 +1,53 @@
+3 Roles  
+=======
+Devops Operations (DO), 
+Devops Administration (DA), 
+Devops for Application Automation (Da)
+
+DO:
+Infra Monitoring tools - Nagios*, Icinga,Splunk
+CM Tools - Monit, Ansible, Chef*, Puppet*
+Log Tools - LogSlash, ELK*, SumoLogic, Scalyr, Graylog
+Task Monitor - Jenkins, JIRA*
+Container Orch - Vagrant, Docker*,rkt
+Gather Statistics Tools - Collectl/collectd/mcollect*
+Repository - GITB*,BITB,Artefactory
+Build mgmt tools - Gradle*, Maven, Ant
+Packet Logging - Snort, Cisconl
+
+DA:
+Discovery Tools - Consul.IO
+Automation CI/CD - Bamboo, Chef
+Orchestration - Kubernetes*,MaesoSphere,CloudVagrant, Docker Swarm
+Error Monitoring and Reporting Platform - Raygun, Pagerduty*, Overops
+Issue Reporting - JIRA*
+Service Monitoring - Prometheus
+Cluster Grid - Ganglia
+Security Management - Snort
+Intelligent Software Arch - SALT Stack
+IT Automation - CFEngine
+Deployment Automation - Juju*, Capistano
+Process Management - Supervisord
+Code management - Code Climate
+AM Tools - Relic AM
+Auditing - Rudder
+
+Da:
+Stack Development Tools - Prometheus/Grafana (Monitoring), 
+Devops Integration - SCM, GIT Integration, JIRA, Patterns.
+Automation Tools Integration - Helm, Swagger, APiary, RAML.
+MicroServices Architecture Patterns 
+QA Microservices and Design Tools with ML/AI Automations -Hoverfly, Ambassador, VCR, Vagrant, Pact
+Data Automation - Upguard
+Deployment Tools - Containers Docker/Maesos, Serverless (Fn, AWS Lamdba), Kubernetes(App Dev)
+AI Automation - Python, YAML, R (Stats, Monitoring) , CNI,PERL 
+Code management - Code Climate
+
++++++
+Middleware
+Database - NOSQL , MYSQL 
+Linux
+Cloud Service Automation
+
+
+

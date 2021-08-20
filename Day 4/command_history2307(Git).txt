@@ -1,0 +1,47 @@
+   
+  501  minikube status
+  502  kubectl cluster-info
+  503  minikube ip
+  504  kubectl get nodes
+  505  minikube version
+  506  kubectl get nodes -o wide
+  507  kubectl api-resources
+  508  clear
+  509  kubectl config view
+  510  kubectl get nodes
+  511  kubectl describe node minikube
+  512  kubectl get deployments -n kube-system
+  513  kubectl get namespaces
+  514  kubectl get pods
+  515  kubectl get pods -n kube-system
+  516  kubectl describe pod etcd-minikube
+  517  kubectl describe pod etcd-minikube -n kube-system
+  518  clear
+  519  kubectl create ns demo
+  520  kubectl describe ns demo
+  521  kubectl get pods -n demo
+  522  kubectl get pods
+  523  kubectl config set-context --current --namespace demo
+  524  kubectl config view
+  525  kubectl get pods
+  526  clear
+  527  kubectl run nginx-web-server --image=nginx
+  528  kubectl get pods
+  529  kubectl get events
+  530  kubectl describe pod nginx-web-server
+  531  clear
+  532  kubectl describe pod nginx-web-server
+  533  clear
+  534  kubectl exec -i -t nginx-web-server bash
+  535  kubectl describe pod nginx-web-server
+  536  kubectl get pods
+  537  kubectl get pods -o wide
+  538  kubectl expose pod nginx-web-server --type=NodePort --port=80
+  539  kubectl get services
+  540  kubectl describe service nginx-web-server
+  541  minikube service nginx-web-server -n demo
+  542  clear
+  543  kubectl run test-pod --image=alpine -- sleep 3600
+  544  kubectl get pods
+  545  kubectl get svc --all-namespaces
+  546  history > /d/command_history2307

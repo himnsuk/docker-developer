@@ -1,0 +1,72 @@
+Docker Installation:
+-- Please Check BIOS Setup or in Task Manager Performance to see Virtualization Enabled.
+-- Ensure One Browser is Enabled.
+-- Create A Docker Hub Account (Free Account) - Login and Password (Sign up)
+-- GIT Hub Account (Optional)
+-- Install Docker ToolBox Legacy https://docs.docker.com/toolbox/overview/#whats-in-the-box
+----- Check for Kitematic, Docker Quick Start Terminal , Oracle VirtualBox.
+----- Profile for .docker directory.
+
+Any Hyperv Error
+open cmd in administrator mode
+dism.exe /Online /Disable-Feature:Microsoft-Hyper-V
+bcdedit /set hypervisorlaunchtype off
+
+
+Labs:1 
+Docker CLI (Docker Client CLI)
+Run command option in Docker - Pulls the container and then runs the application.
+
+1. docker search hello-world
+ Search hello-world image 
+
+2. docker create --name TestApache httpd
+
+Docker pulls the image locally and checks pulls it from DockerHub , creates and image and check for existence.
+Lets see the following:
+
+3.Docker container ls
+(Any Containers crated) ?
+
+4.Docker image ls
+What do you see Images - Image ID , Name of Image (?) , Image Tag, Repository and Image Size
+
+5.Docker ps -a
+Look for status . Ports and Command 
+
+6.Docker ps -l
+What is difference between 4 and 5.
+
+7.Docker search ubuntu
+Search for ubuntu image in Docker 
+
+8.docker search -s 1000 ubuntu
+Search for higher stars rating to get the right image 
+
+9.docker search --no-trunc -s 1000 ubuntu
+Truncated wihout content.
+
+10. docker search --no-trunc --limit 10 ubuntu
+Searches for first 10 searches for ubuntu
+
+11.To check for client and Server version
+docker version
+
+12. Get list of Images
+docker image ls
+(Look for Tag and Size)
+
+13. To Access an image , you need a container.
+Docker inspect <image id>
+Docker container myubun
+what are differences you see between the JSONS ?
+
+14.docker info
+Get Info on docker, Review registry
+
+15.docker stats
+Get Real time statistics Information on docker 
+
+16. docker network ls
+This provides list of networks availabile within container. Default Network Drive is bridge.
+
